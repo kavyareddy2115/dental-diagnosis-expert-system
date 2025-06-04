@@ -14,13 +14,14 @@ st.set_page_config(
     layout="wide"
 )
 
+# Import the symptom mapping
+from symptom_mapping import symptom_mapping, get_symptom_name
+
 # Function to load or train model
 @st.cache_resource
 def load_or_train_model():
-    # Define column names
-    names = ['GP01','GP02','GP03','GP04','GP05', 'GP06','GP07', 'GP08', 'GP09', 'GP10', 
-             'GP11', 'GP12', 'GP13', 'GP14', 'GP15', 'GP16', 'GP17', 'GP18', 'GP19', 'GP20', 
-             'GP21', 'GP22', 'GP23', 'GP24', 'GP25','GP26','GP27','GP28', 'Diagnosis']
+    # Define column names with descriptive labels
+    names = list(symptom_mapping.values()) + ['Diagnosis']
     
     # Check if model exists
     if os.path.exists('dental_model.pkl'):
