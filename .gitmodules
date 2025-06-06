@@ -1,0 +1,3 @@
+[submodule "dental-diagnosis-expert-system"]
+    path = dental-diagnosis-expert-system
+    url = https://github.com/kavyareddy2115/dental-diagnosis-expert-system.git

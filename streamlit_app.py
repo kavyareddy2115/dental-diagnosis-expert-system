@@ -224,4 +224,15 @@ elif page == "Data Visualization":
 
 # Footer
 st.sidebar.markdown("---")
-st.sidebar.info("Dental Diagnosis Expert System © 2023")
+st.sidebar.info("Dental Diagnosis Expert System © KavyaReddy")
+
+# Add symptom code reference
+st.sidebar.markdown("---")
+st.sidebar.subheader("Symptom Code Reference")
+st.sidebar.markdown("Scroll down to see symptom codes:")
+with st.sidebar.expander("Symptom Codes (GP01-GP28)"):
+    for code, name in symptom_mapping.items():
+        st.sidebar.markdown(f"**{code}**: {name}")
+
+
+
